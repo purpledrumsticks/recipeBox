@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Modal } from 'react-bootstrap'
+import { Modal, Form, FormGroup, FormControl, Button } from 'react-bootstrap'
 
 class AddRecipe extends React.Component {
   constructor(props) {
@@ -24,18 +24,27 @@ class AddRecipe extends React.Component {
   render() {
     return (
       <div>
-        {!this.state.edit ? <button onClick={this.open}>Edit Recipes</button> : null}
+        {!this.state.edit ? <Button onClick={this.open}>Edit Recipes</Button> : null}
         <Modal show={this.state.showModal} onHide={this.close}>
           <Modal.Header>
             <Modal.Title>Recipe Box</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            //Forms
+            <form>
+              <FormGroup>
+                <FormControl
+                  type="text"
+                  value={this.state.value}
+                  placeholder="Add New Recipe"
+                  onChange={this.handleChange}
+                />
+              </FormGroup>
+            </form>
           </Modal.Body>
           <Modal.Footer>
           </Modal.Footer>
-          <button>Save Changes</button>
-          <button onClick={this.close}>Close</button>
+          <Button>Save Changes</Button>
+          <Button onClick={this.close}>Close</Button>
         </Modal>
       </div>
     )
