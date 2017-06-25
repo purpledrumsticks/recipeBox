@@ -1,0 +1,33 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.recipeBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  padding: 100px;
+  min-width: 85vw;
+  border-radius: 14px;
+}
+
+.addRecipe {
+  margin-top: 15px;
+}
+
+.modal-container {
+  position: relative;
+}
+.modal-container .modal, .modal-container .modal-backdrop {
+  position: absolute;
+}
+
+.accordion {
+  cursor: pointer;
+  min-width: 50vw;
+}

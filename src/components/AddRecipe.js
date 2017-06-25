@@ -24,7 +24,7 @@ class AddRecipe extends React.Component {
   render() {
     return (
       <div>
-        {!this.state.edit ? <Button onClick={this.open}>Edit Recipes</Button> : null}
+        {!this.state.edit ? <Button className="addRecipe" onClick={this.open}>Add Recipe</Button> : null}
         <Modal show={this.state.showModal} onHide={this.close}>
           <Modal.Header>
             <Modal.Title>Recipe Box</Modal.Title>
